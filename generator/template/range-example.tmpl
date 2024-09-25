@@ -1,0 +1,6 @@
+{{ define "rangeExample" }}
+Hello {{ .Name }}!
+{{ range .Hobbies }}
+- {{ . }}
+{{end}}
+{{end}}
