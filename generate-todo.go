@@ -5,6 +5,8 @@ import (
 	"golang-code-generation/todo"
 )
 
+//go:generate go run generate-todo.go
+
 func main() {
 	parsedStruct := generator.GenerateParsedStruct(todo.TodoEntity{}, "Todo", "todo")
 	buffer, err := generator.TemplateToString("struct", parsedStruct)
